@@ -1,5 +1,5 @@
-import React, { useState, lazy } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, lazy, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { userLogout } from "../../Redux/Actions";
 import { AccountCircle, LogoutOutlined, Menu } from "@mui/icons-material";
@@ -64,6 +64,16 @@ const Header = ({ drawerWidth }) => {
   // redux
   const dispatch = useDispatch();
 
+  // router
+  const location = useLocation();
+
+  useEffect(() => {
+    let tabIdx = sellerdHeaderNav.findIndex(
+      (item) => item.path === location.pathname
+    );
+    setTabNav(tabIdx);
+  }, []);
+
   const handleLogout = async () => {
     dispatch(userLogout());
     navigate("/");
@@ -87,6 +97,7 @@ const Header = ({ drawerWidth }) => {
 
   const handleChange = (event, newValue) => {
     setTabNav(newValue);
+    console.log(newValue, "newValue");
     navigate(event.target.name);
   };
 

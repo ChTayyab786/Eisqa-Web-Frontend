@@ -1,0 +1,23 @@
+@import "../../theme/colorsConfig.scss";
+
+.overview-tab {
+  .label {
+    font-weight: 600;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 10px;
+    color: #707070;
+  }
+  .gig-title {
+    .MuiInputBase-input {
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+  }
+  .green-btn {
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: none;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 200px;
+  }
+}

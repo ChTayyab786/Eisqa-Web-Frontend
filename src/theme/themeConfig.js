@@ -1,8 +1,8 @@
 import { createTheme } from "@mui/material/styles";
 
 const primaryColor = "#2f4983";
-const tableHeadColor = "#9debd6";
 const green = "#1ebf73";
+const gray = "#707070";
 
 export const theme = createTheme({
   palette: {
@@ -11,6 +11,9 @@ export const theme = createTheme({
     },
     green: {
       main: green,
+    },
+    gray: {
+      main: gray,
     },
   },
   breakpoints: {
@@ -35,13 +38,6 @@ export const theme = createTheme({
         },
         text: {
           textTransform: "none",
-        },
-      },
-    },
-    MuiTableHead: {
-      styleOverrides: {
-        root: {
-          backgroundColor: tableHeadColor,
         },
       },
     },
