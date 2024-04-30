@@ -6,7 +6,7 @@ import Pricing from "../../../Components/GigTabs/Pricing";
 
 const Gigs = () => {
   // state
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(1);
 
   return (
     <Box className="create-gig-page">
